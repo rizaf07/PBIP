@@ -1,0 +1,4240 @@
+{
+  "compatibilityLevel": 1601,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Sumber Daya Peternakan\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.118.828.0 (23.06)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "dim_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dim date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "DimDate": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "dim moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "dim period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  }
+                ]
+              },
+              "dim_date.date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "ConceptualProperty": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "period": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "dim_date.date.variation.date_hierarchy": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "Hierarchy": "Date Hierarchy",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date hierarchy": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "dim_date.date.variation.date_hierarchy.day": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Day",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date day": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment day": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period day": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "dim_date.date.variation.date_hierarchy.month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Month",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date mth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "mth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "moment month": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period month": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "dim_date.date.variation.date_hierarchy.quarter": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Quarter",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date quarter": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date qtr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.833
+                    }
+                  },
+                  {
+                    "qtr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.818
+                    }
+                  },
+                  {
+                    "moment quarter": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period quarter": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "dim_date.date.variation.date_hierarchy.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "Hierarchy": "Date Hierarchy",
+                    "HierarchyLevel": "Year",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date yr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "yr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "moment year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "dim_date.year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DimDate",
+                    "ConceptualProperty": "YEAR"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "yr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sumber daya peternakan": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.TextLY": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "#TextLY"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "#TextLY": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "no textly": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "num textly": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "number textly": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.TextYTD": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "#TextYTD"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "#TextYTD": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "no textytd": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "num textytd": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "number textytd": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.avg": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Total Nilai"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "#avg": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "# average": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "no avg": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "num avg": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "number avg": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.bidang": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Bidang"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "bidang": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.bot_5_text": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Bot5Text"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "bot 5 text": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Bot5Text": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "text": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "5 text": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "bot 5 manuscript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "bot 5 transcript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "bot 5 typescript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "bot 5 edition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "bot 5 version": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "5 manuscript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "5 transcript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "5 typescript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "5 edition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "5 version": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.dimensi": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Dimensi"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dimensi": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.growth": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "#Growth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "#growth": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "no growth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "num growth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "number growth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "# development": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "# evolution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "# progression": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "development": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "evolution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "progression": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "# growing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "Growth": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.hirarki_provinsi": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "Hierarchy": "Hirarki Provinsi"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "hirarki provinsi": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.hirarki_provinsi.kabupaten": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "Hierarchy": "Hirarki Provinsi",
+                    "HierarchyLevel": "Kabupaten"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "kabupaten": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "Hierarchy": "Hirarki Provinsi",
+                    "HierarchyLevel": "Provinsi/Nasional"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "provinsi/nasional": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "provinsi nasional": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "nasional": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.jenis": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Jenis"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "jenis": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.kabupaten": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Kabupaten"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "kabupaten": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.komodita": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Komoditas"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "komodita": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.lytd_v": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "#LYTD_V"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "#lytd_v": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "no lytd_v": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "num lytd_v": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "number lytd_v": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.nilai": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Nilai"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "nilai": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.nilai_kerbau": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Nilai_Kerbau"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "nilai kerbau": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Nilai_Kerbau": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.provinsi": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Provinsi"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "provinsi": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.provinsi_nasional": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Provinsi/Nasional"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "provinsi/nasional": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "provinsi nasional": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "nasional": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.satuan": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Satuan"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "satuan": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.tahun": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Tahun"
+                  }
+                },
+                "Hidden": true,
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tahun": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.text_growth": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "TextGrowth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "text growth": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "TextGrowth": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "text development": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "text evolution": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "text progression": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "text growing": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "text progress": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "text advance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "text tumor": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "text cyst": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "text outgrowth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "text carcinoma": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.text_last_year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "TextLastYear"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "text last year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "TextLastYear": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "last year": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "text last yr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "last yr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "text end year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text final year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text closing year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text concluding year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text finishing year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text former year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text latest year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "text latter year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.text_this_year": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "TextThisYear"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "text this year": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "TextThisYear": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "text this yr": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "manuscript this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "transcript this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "typescript this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "edition this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "version this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "writing this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "script this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "copy this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "schoolbook this year": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.top_5_text": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Top5Text"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "top 5 text": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Top5Text": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "text": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "5 text": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "best 5 text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "first 5 text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "leading 5 text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "maximum 5 text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "peak 5 text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "upper 5 text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "top 5 manuscript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "top 5 transcript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "top 5 typescript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  },
+                  {
+                    "top 5 edition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.508
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.total_text": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "TotalText"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total text": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "TotalText": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "text": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall text": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total manuscript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total transcript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total typescript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total edition": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total version": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "manuscript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "transcript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "typescript": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.value": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "Value"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "value": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "assessment": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "worth": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "price": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "cost": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "charge": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "rate": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "importance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "significance": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "usefulness": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "consequence": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "sumber_daya_peternakan.ytd_v": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sumber Daya Peternakan",
+                    "ConceptualProperty": "#YTD_V"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "#ytd_v": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "no ytd_v": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "num ytd_v": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "number ytd_v": {
+                      "Source": {
+                        "Agent": "OfficeThesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "dim_date_date_has_variation_date_hierarchy": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.date.variation.date_hierarchy"
+                      },
+                      "Subject": {
+                        "Role": "dim_date.date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date.date": {
+                    "Target": {
+                      "Entity": "dim_date.date"
+                    }
+                  },
+                  "dim_date.date.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "dim_date_date_variation_date_hierarchy_has_day": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.date.variation.date_hierarchy.day"
+                      },
+                      "Subject": {
+                        "Role": "dim_date.date.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date.date.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy"
+                    }
+                  },
+                  "dim_date.date.variation.date_hierarchy.day": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy.day"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "dim_date_date_variation_date_hierarchy_has_month": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.date.variation.date_hierarchy.month"
+                      },
+                      "Subject": {
+                        "Role": "dim_date.date.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date.date.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy"
+                    }
+                  },
+                  "dim_date.date.variation.date_hierarchy.month": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy.month"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "dim_date_date_variation_date_hierarchy_has_quarter": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.date.variation.date_hierarchy.quarter"
+                      },
+                      "Subject": {
+                        "Role": "dim_date.date.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date.date.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy"
+                    }
+                  },
+                  "dim_date.date.variation.date_hierarchy.quarter": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy.quarter"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "dim_date_date_variation_date_hierarchy_has_year": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.date.variation.date_hierarchy.year"
+                      },
+                      "Subject": {
+                        "Role": "dim_date.date.variation.date_hierarchy"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date.date.variation.date_hierarchy": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy"
+                    }
+                  },
+                  "dim_date.date.variation.date_hierarchy.year": {
+                    "Target": {
+                      "Entity": "dim_date.date.variation.date_hierarchy.year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "dim_date_has_date": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.date"
+                      },
+                      "Subject": {
+                        "Role": "dim_date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date": {
+                    "Target": {
+                      "Entity": "dim_date"
+                    }
+                  },
+                  "dim_date.date": {
+                    "Target": {
+                      "Entity": "dim_date.date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "dim_date_has_year": {
+                "Binding": {
+                  "ConceptualEntity": "DimDate"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date.year"
+                      },
+                      "Subject": {
+                        "Role": "dim_date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date": {
+                    "Target": {
+                      "Entity": "dim_date"
+                    }
+                  },
+                  "dim_date.year": {
+                    "Target": {
+                      "Entity": "dim_date.year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_TextLY": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.TextLY"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.TextLY": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.TextLY"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_TextYTD": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.TextYTD"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.TextYTD": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.TextYTD"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_avg": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.avg"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.avg": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.avg"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_bidang": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.bidang"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.bidang": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.bidang"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_bot_5_text": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.bot_5_text"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.bot_5_text": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.bot_5_text"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_dim_date": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "dim_date"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "dim_date": {
+                    "Target": {
+                      "Entity": "dim_date"
+                    }
+                  },
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_dimensi": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.dimensi"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.dimensi": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.dimensi"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_growth": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.growth"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.growth": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.growth"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_hirarki_provinsi": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.hirarki_provinsi": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_jenis": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.jenis"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.jenis": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.jenis"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_kabupaten": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.kabupaten"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.kabupaten": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.kabupaten"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_komodita": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.komodita"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.komodita": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.komodita"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_lytd_v": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.lytd_v"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.lytd_v": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.lytd_v"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_nilai": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.nilai"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.nilai": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.nilai"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_nilai_kerbau": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.nilai_kerbau"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.nilai_kerbau": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.nilai_kerbau"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_provinsi": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.provinsi"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.provinsi": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.provinsi"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_provinsi_nasional": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.provinsi_nasional"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.provinsi_nasional": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.provinsi_nasional"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_satuan": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.satuan"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.satuan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.satuan"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_text_growth": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.text_growth"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.text_growth": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.text_growth"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_text_last_year": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.text_last_year"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.text_last_year": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.text_last_year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_text_this_year": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.text_this_year"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.text_this_year": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.text_this_year"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_top_5_text": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.top_5_text"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.top_5_text": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.top_5_text"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_total_text": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.total_text"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.total_text": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.total_text"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_value": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.value"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.value": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.value"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_has_ytd_v": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.ytd_v"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan"
+                    }
+                  },
+                  "sumber_daya_peternakan.ytd_v": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.ytd_v"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_hirarki_provinsi_has_kabupaten": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.kabupaten"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan.hirarki_provinsi": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi"
+                    }
+                  },
+                  "sumber_daya_peternakan.hirarki_provinsi.kabupaten": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi.kabupaten"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_hirarki_provinsi_has_provinsi_nasional": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan.hirarki_provinsi": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi"
+                    }
+                  },
+                  "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sumber_daya_peternakan_hirarki_provinsi_provinsi_nasional_has_sumber_daya_peternakan_hirarki_provinsi_kabupaten": {
+                "Binding": {
+                  "ConceptualEntity": "Sumber Daya Peternakan"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.kabupaten"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional"
+                      },
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.kabupaten"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Preposition": {
+                      "Object": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "sumber_daya_peternakan.hirarki_provinsi.kabupaten"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sumber_daya_peternakan.hirarki_provinsi.kabupaten": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi.kabupaten"
+                    }
+                  },
+                  "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional": {
+                    "Target": {
+                      "Entity": "sumber_daya_peternakan.hirarki_provinsi.provinsi_nasional"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "68762ef6-bc24-495b-9a03-ccd5cc1dbfba",
+        "fromColumn": "Date",
+        "fromTable": "DimDate",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23"
+      },
+      {
+        "name": "1c50ec1a-3ed5-4c38-afab-02146a384dd4",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Tahun",
+        "fromTable": "Sumber Daya Peternakan",
+        "toCardinality": "many",
+        "toColumn": "YEAR",
+        "toTable": "DimDate"
+      }
+    ],
+    "sourceQueryCulture": "en-ID",
+    "tables": [
+      {
+        "name": "DateTableTemplate_a9f2683a-8127-42a6-85c7-feeb032eb85c",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "eb74e2e6-0792-430e-8b07-37a3d1621984",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e3c0db2b-d680-406c-b075-54b383382903",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "98fedde6-45cd-4d6a-a3a4-63431918c4fe",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "d75fa027-2478-4857-80c6-03dd17816bdb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "81951d26-7a9a-4927-91a8-70a7ec868afa",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b86138d4-7961-4778-ac4c-e27c40ac8470",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "438a88cd-5e97-4bca-a996-655faaa7e941",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9916d586-c227-4614-ba20-a126ca3bf1ef",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "6e21d5e7-e3c3-4185-a9b3-bcc45c924657",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "94539fee-955f-4535-9048-508b74149099",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "99dd486c-89fe-4a30-b498-c30f7dca0d31",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "4a81f90f-f242-4e1f-b60e-b020a069f2c3"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "bdc80530-f562-4718-869b-36bf809a30c4",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_a9f2683a-8127-42a6-85c7-feeb032eb85c-c728043c-06b3-4572-8a07-39a6b8e56903",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "7bbb002fc6f645bfb898cdbbe0272899"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "a7c3e6cc-b682-4138-99b7-dc1b5feb4a5e",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23"
+                },
+                "isDefault": true,
+                "relationship": "68762ef6-bc24-495b-9a03-ccd5cc1dbfba"
+              }
+            ]
+          },
+          {
+            "name": "RankXYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "RANKX(DimDate,DimDate[YEAR],DimDate[YEAR],DESC,Dense)",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "800f89f3-c5f1-405d-9a6f-302cb472a3d2",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "YEAR(DimDate[Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "d257e5b2-3dd4-47a0-b1fb-66246a96b9cb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "b6e3fc69-04cb-4893-ad06-a40dd089d61e",
+        "partitions": [
+          {
+            "name": "DimDate-08178051-2ff3-4d16-8333-272fc2137ab1",
+            "mode": "import",
+            "source": {
+              "expression": "CALENDAR(DATE(2001,1,1), DATE(2019,12,31))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "7f4fa6a7-c957-44b0-9dbc-c6ca394ebe2f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "4b1c5248-e4bd-4fc8-a4dd-c814edbf04cf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "0a7b5985-bd26-4f73-95b2-71edc22a7e35",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ef615b2b-47b7-4795-8e60-c23803a2363a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b9e3d5fc-a9c9-4569-88fd-4fe385a18875",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "fa98255a-cbf4-4938-9ce0-c8aac04b0224",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b5ad0d8c-820d-4559-aeff-3e5e717396c6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f26743de-aeb6-41b9-a050-6b8c48084de0",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "02721c25-a90e-46db-91e8-315e98b02f71",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "39b8b254-4f08-4a07-b636-a917102606a7",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "c08ddb14-108c-4a13-b10c-22ee20d1678e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "f16e5567-1697-48e8-a196-ebf26474bb53"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "ff857aac-440e-428e-967c-73a55ead1e24",
+        "partitions": [
+          {
+            "name": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23-e3a70a2b-1ebe-4410-9b40-3783698ccb79",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('DimDate'[Date])), 1, 1), Date(Year(MAX('DimDate'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Sumber Daya Peternakan",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Bidang",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f3e632d1-eab4-44ff-a075-4fc90767f5f4",
+            "sourceColumn": "Bidang",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Daging",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
+              "        \"BABI\", \"Babi\",",
+              "        \"DAGING BABI\", \"Babi\",",
+              "        \"SAPI POTONG\", \"Sapi\",",
+              "        \"DAGING SAPI\", \"Sapi\",",
+              "        \"KUDA\", \"Kuda\",",
+              "        \"DAGING KUDA\", \"Kuda\",",
+              "        \"AYAM BURAS\", \"Ayam Buras\",",
+              "        \"DAGING AYAM BURAS\", \"Ayam Buras\",",
+              "        \"AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
+              "        \"DAGING AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
+              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"DAGING AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"ITIK\", \"Itik\",",
+              "        \"DAGING ITIK\", \"Itik\",",
+              "        \"ITIK MANILA\", \"Itik Manila\",",
+              "        \"DAGING ITIK MANILA\", \"Itik Manila\",",
+              "        \"KELINCI\", \"Kelinci\",",
+              "        \"DAGING KELINCI\", \"Kelinci\",",
+              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        \"DAGING BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        \"MERPATI\", \"Merpati\",",
+              "        \"DAGING MERPATI\", \"Merpati\",",
+              "        \"KERBAU\", \"Kerbau\",",
+              "        \"DAGING KERBAU\", \"Kerbau\",",
+              "        \"DOMBA\", \"Domba\",",
+              "        \"DAGING DOMBA\", \"Domba\",",
+              "        \"KAMBING\", \"Kambing\",",
+              "        \"DAGING KAMBING\", \"Kambing\",",
+              "        BLANK()",
+              "        )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "b4549fba-5b8c-4b3f-9c28-86e3710e16d5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dimensi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "16b34f55-e9b3-4597-93a8-57aa23bfa84c",
+            "sourceColumn": "Dimensi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Jenis",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Sumber Daya Peternakan'[Satuan],",
+              "        \"000 Ekor\", \"Unggas\",",
+              "        \"Ekor\", \"Mamalia\",",
+              "        \"KG\", \"Hasil Sapi Perah\",",
+              "        \"Ton\", \"Hasil Ternak\")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "a22b7d86-5691-47b9-a0e9-efd25c5a5712",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Kabupaten",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "34417b15-899a-4fdb-b5bd-fcc9dfdcdb1e",
+            "sourceColumn": "Kabupaten",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Komoditas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "40d71021-f1a6-491f-893a-e5bb075f5259",
+            "sourceColumn": "Komoditas",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nilai",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDecimal\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "2a11b492-24ab-486a-99b7-d240f91c9be5",
+            "sourceColumn": "Nilai",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Provinsi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d35cd701-4b62-4b8c-81b8-8e15e87e25ce",
+            "sourceColumn": "Provinsi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Provinsi/Nasional",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9f1213e1-4863-4afd-85ad-766a8c30a57b",
+            "sourceColumn": "Provinsi/Nasional",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Satuan",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0afe9e0a-e3ff-41f9-b933-9b9ada69721f",
+            "sourceColumn": "Satuan",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Short Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "expression": "\"'\"&RIGHT('Sumber Daya Peternakan'[Tahun],2)",
+            "isDataTypeInferred": true,
+            "lineageTag": "8114f5d9-31dd-4ccd-917c-45977be736a7",
+            "sortByColumn": "Tahun",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Tahun",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cfce897f-8686-4a6d-bb6c-e526bd4ce85d",
+            "sourceColumn": "Tahun",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Telur",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
+              "        \"AYAM BURAS\", \"Ayam Buras\",",
+              "        \"TELUR AYAM BURAS\", \"Ayam Buras\",",
+              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"TELUR AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"ITIK\", \"Itik\",",
+              "        \"TELUR ITIK\", \"Itik\",",
+              "        \"ITIK MANILA\", \"Itik Manila\",",
+              "        \"TELUR ITIK MANILA\", \"Itik Manila\",",
+              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        \"TELUR BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        BLANK()",
+              "        )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "523bcc65-bc77-43a2-b59b-596500ad9f4a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hirarki Provinsi",
+            "levels": [
+              {
+                "name": "Provinsi/Nasional",
+                "column": "Provinsi/Nasional",
+                "lineageTag": "eb802f68-3231-45dc-be12-82fdb7da5a99",
+                "ordinal": 0
+              },
+              {
+                "name": "Kabupaten",
+                "column": "Kabupaten",
+                "lineageTag": "ab3cdf50-f95c-4efa-ae65-df623d6dbc66",
+                "ordinal": 1
+              }
+            ],
+            "lineageTag": "1489907a-f76c-4a0d-839f-33c6305827c2"
+          }
+        ],
+        "lineageTag": "cd61c823-aaa0-40f2-9f6c-777ff6cdacd4",
+        "measures": [
+          {
+            "name": "Nilai_Kerbau",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "IF(CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\"))=BLANK(),0, CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\")))",
+            "formatString": "#,0",
+            "lineageTag": "241d0e20-3368-4ba1-b986-3a67cd3f016b"
+          },
+          {
+            "name": "Value",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "IF(SELECTEDVALUE('Sumber Daya Peternakan'[Provinsi])=BLANK(),0, SUM('Sumber Daya Peternakan'[Nilai]))",
+            "formatString": "#,0",
+            "lineageTag": "11785d3b-4819-44ca-8789-6abe90600987"
+          },
+          {
+            "name": "Top5Text",
+            "expression": [
+              "",
+              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "return \"TOP 5 PETERNAKAN \" & mmlia"
+            ],
+            "lineageTag": "52273238-7076-49a4-a904-b93e9b82e846"
+          },
+          {
+            "name": "Bot5Text",
+            "expression": [
+              "",
+              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "return \"BOTTOM 5 PETERNAKAN \" & mmlia"
+            ],
+            "lineageTag": "db9c4bf7-ff26-4571-8f7f-91c9b02c2d45"
+          },
+          {
+            "name": "TotalText",
+            "expression": [
+              "",
+              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "return \"TOTAL PETERNAKAN \" & mmlia"
+            ],
+            "lineageTag": "b6b567a2-2621-45bc-81f0-992f571c2421"
+          },
+          {
+            "name": "#YTD_V",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "RETURN",
+              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "035ce890-f536-4e5c-b026-7e32fab0bc59"
+          },
+          {
+            "name": "#LYTD_V",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX(DimDate[YEAR])",
+              "VAR B = A-1",
+              "RETURN",
+              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "55d735ff-54fb-4e63-881f-26ee729beff5"
+          },
+          {
+            "name": "TextLastYear",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "VAR B = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))",
+              "VAR C = A-1",
+              "VAR D = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "RETURN",
+              "\"LAST YEAR (\"&C&\")\"",
+              "--\"PETERNAKAN \"&D&\" LAST YEAR (\" & C &\")\""
+            ],
+            "lineageTag": "d9fb9684-097e-4c58-9786-589c85818fca"
+          },
+          {
+            "name": "TextThisYear",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "var B = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "RETURN",
+              "\"DATA TERAKHIR (\" &A&\")\"",
+              "--\"PETERNAKAN \" &B& \" DARI DATA TERAKHIR (\" & A &\")\""
+            ],
+            "lineageTag": "48a06354-0d85-45c3-9647-655797f99641"
+          },
+          {
+            "name": "#Growth",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = IFERROR(([#YTD_V]-[#LYTD_V])/[#LYTD_V],0)",
+              "RETURN",
+              "A"
+            ],
+            "lineageTag": "d3014b4e-15b4-42fb-8f65-684522d604d5"
+          },
+          {
+            "name": "TextGrowth",
+            "expression": [
+              "",
+              "\"Growth %\""
+            ],
+            "lineageTag": "da5187b0-3838-47e6-9b4b-df31ec83f922"
+          },
+          {
+            "name": "Total Nilai",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "SUM('Sumber Daya Peternakan'[Nilai])",
+            "formatStringDefinition": {
+              "expression": [
+                "VAR A = SELECTEDMEASURE()",
+                "return",
+                "SWITCH(TRUE(),",
+                "A<1000,\"0\",",
+                "A<1000000,\"#,.0K\",",
+                "A<1000000000,\"#,,.0M\",",
+                "A>=1000000000,\"#,,,.0B\")"
+              ]
+            },
+            "lineageTag": "4841ceff-863a-4c75-acbe-c06417a16839"
+          },
+          {
+            "name": "#TextYTD",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "VAR B = MAX('Sumber Daya Peternakan'[Tahun])-1",
+              "RETURN",
+              "A&\" vs LY\""
+            ],
+            "lineageTag": "708d7f59-cf23-44ed-8cb5-6bcf8a76198f"
+          },
+          {
+            "name": "#TextLY",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])-1",
+              "RETURN",
+              "\"(\"&A&\")\""
+            ],
+            "lineageTag": "ab7b6424-b5b8-4fc9-8d5f-69c952d67504"
+          },
+          {
+            "name": "#Value",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Satuan]<>\"KG\"))",
+            "formatString": "0",
+            "lineageTag": "ee5e0e3d-7458-40f2-b6db-d100b95532bc"
+          },
+          {
+            "name": "Date of Max",
+            "expression": [
+              "",
+              "Var __SelectedMax =",
+              " CALCULATE(",
+              "   MAX( 'Sumber Daya Peternakan'[Nilai]),",
+              "    ALLSELECTED(DimDate)",
+              ")",
+              "",
+              "RETURN ",
+              "",
+              "CALCULATE(",
+              "    VALUES(DimDate[YEAR]),",
+              "        FILTER(",
+              "            ALL( DimDate),",
+              "            [Max] = __SelectedMax )",
+              ")"
+            ],
+            "lineageTag": "6d8ed4f6-245d-4ede-9a5e-7b89e0619896"
+          },
+          {
+            "name": "Max",
+            "expression": "MAX('Sumber Daya Peternakan'[Nilai])",
+            "formatString": "0",
+            "lineageTag": "00feea4a-2fcd-416a-9ca3-8429f54e3445"
+          },
+          {
+            "name": "Measure for a Card",
+            "expression": "\"Produksi tertinggi dengan nilai \"&[MaxProduksiTahun]&\" Pada tahun \"& [Date of Max]",
+            "lineageTag": "a1e812a5-2619-4b3f-861f-065e1e730354"
+          },
+          {
+            "name": "MaxProduksiTahun",
+            "expression": [
+              "",
+              "var tbl = SUMMARIZE('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun],\"Total Nilai\",SUM('Sumber Daya Peternakan'[Nilai]))",
+              "return",
+              "MAXX(tbl,[Total Nilai])"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "47e57cd4-aa91-4f14-bf01-f4abf656dd53"
+          },
+          {
+            "name": "maxx",
+            "expression": [
+              "",
+              ""
+            ],
+            "formatString": "0",
+            "lineageTag": "0abdee06-ff77-4bf0-9b9f-b73b7d8d4f7b"
+          },
+          {
+            "name": "Produksi/Populasi",
+            "expression": [
+              "",
+              "VAR ton = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
+              "VAR pop = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))",
+              "RETURN",
+              "ton/pop"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "2885f667-cb68-499d-ae9b-9b67ff6b00b8"
+          },
+          {
+            "name": "#YTD_G",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "RETURN",
+              "CALCULATE([#Production_V],FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
+            ],
+            "lineageTag": "59e22d8f-cc56-41e4-9e02-79fb0b1751c3"
+          },
+          {
+            "name": "#LYTD_G",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX(DimDate[YEAR])",
+              "VAR B = A-1",
+              "RETURN",
+              "CALCULATE([#Production_V],FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
+            ],
+            "lineageTag": "e7a261bd-cd11-419e-af3c-28fa416f62f3"
+          },
+          {
+            "name": "#Growth_Pro/Pop",
+            "expression": "IFERROR(([#YTD_G]-[#LYTD_G])/[#LYTD_G],0)",
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%",
+            "lineageTag": "72a09444-de5b-4c68-9207-c29cf521ffab"
+          },
+          {
+            "name": "#Production_V",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
+            "formatString": "#,0",
+            "lineageTag": "7ac55094-487a-4856-9a87-a0728bcaa593"
+          },
+          {
+            "name": "#LC_Production",
+            "expression": "IF(DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])<=1,CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),ALL('Sumber Daya Peternakan'[Tahun])),CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\")))",
+            "formatString": "0",
+            "lineageTag": "cd4a7162-6b8e-46ae-bed1-f0145e626c6d"
+          },
+          {
+            "name": "#Population_V",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))",
+            "formatString": "#,0",
+            "lineageTag": "c719246e-698f-4865-a22a-c00c4c1f948b"
+          },
+          {
+            "name": "#Count",
+            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])",
+            "formatString": "0",
+            "lineageTag": "d78e7269-914a-48d3-8007-d0187fed1ef3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sumber Daya Peternakan-a988a4b7-2065-4fb5-8fe3-48d5aa6d5529",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Riza\\Downloads\\Sumber Daya Peternakan.csv\"),[Delimiter=\",\", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Bidang\", type text}, {\"Dimensi\", type text}, {\"Level\", type text}, {\"Komoditas\", type text}, {\"Satuan\", type text}, {\"Tahun\", Int64.Type}, {\"Nilai\", Int64.Type}, {\"Kabupaten\", type text}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each true),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each [Tahun] > 2000),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Filtered Rows1\",{{\"Level\", \"Provinsi/Nasional\"}}),",
+                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Renamed Columns\", each true),",
+                "    #\"Inserted Text After Delimiter\" = Table.AddColumn(#\"Filtered Rows2\", \"Text After Delimiter\", each Text.AfterDelimiter([#\"Provinsi/Nasional\"], \" \"), type text),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Inserted Text After Delimiter\",{{\"Text After Delimiter\", \"Provinsi\"}}),",
+                "    #\"Filtered Rows3\" = Table.SelectRows(#\"Renamed Columns1\", each [Tahun] > 2000 and [Tahun] <= 2019),",
+                "    #\"Filtered Rows4\" = Table.SelectRows(#\"Filtered Rows3\", each true)",
+                "in",
+                "    #\"Filtered Rows4\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
