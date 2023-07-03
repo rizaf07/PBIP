@@ -3956,7 +3956,7 @@
               "",
               "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
               "RETURN",
-              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
+              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))*100"
             ],
             "formatString": "#,0",
             "lineageTag": "035ce890-f536-4e5c-b026-7e32fab0bc59"
@@ -4021,7 +4021,7 @@
               "",
               "VAR A = IFERROR(([#YTD_V]-[#LYTD_V])/[#LYTD_V],0)",
               "RETURN",
-              "A*20"
+              "A"
             ],
             "lineageTag": "d3014b4e-15b4-42fb-8f65-684522d604d5"
           },
@@ -4157,7 +4157,7 @@
               "",
               "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
               "RETURN",
-              "CALCULATE([#Production_V],FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
+              "CALCULATE([#Production_V],FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))*100"
             ],
             "lineageTag": "59e22d8f-cc56-41e4-9e02-79fb0b1751c3"
           },
@@ -4204,7 +4204,7 @@
           },
           {
             "name": "#Count",
-            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])",
+            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])*100",
             "formatString": "0",
             "lineageTag": "d78e7269-914a-48d3-8007-d0187fed1ef3"
           }
