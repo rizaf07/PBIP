@@ -4006,12 +4006,6 @@
           },
           {
             "name": "#Growth",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "changedProperties": [
               {
                 "property": "FormatString"
@@ -4023,6 +4017,7 @@
               "RETURN",
               "A"
             ],
+            "formatString": "0.00%;-0.00%;0.00%",
             "lineageTag": "d3014b4e-15b4-42fb-8f65-684522d604d5"
           },
           {
@@ -4198,13 +4193,13 @@
           },
           {
             "name": "#Population_V",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))/100",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))",
             "formatString": "#,0",
             "lineageTag": "c719246e-698f-4865-a22a-c00c4c1f948b"
           },
           {
             "name": "#Count",
-            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])*25",
+            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])",
             "formatString": "0",
             "lineageTag": "d78e7269-914a-48d3-8007-d0187fed1ef3"
           }
