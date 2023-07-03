@@ -1,1785 +1,25 @@
 {
-  "name": "SemanticModel",
   "compatibilityLevel": 1601,
   "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Sumber Daya Peternakan\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.118.828.0 (23.06)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
     "culture": "en-US",
-    "dataAccessOptions": {
-      "legacyRedirects": true,
-      "returnErrorValuesAsNull": true
-    },
-    "defaultPowerBIDataSourceVersion": "powerBI_V3",
-    "sourceQueryCulture": "en-ID",
-    "tables": [
-      {
-        "name": "DateTableTemplate_a9f2683a-8127-42a6-85c7-feeb032eb85c",
-        "isHidden": true,
-        "isPrivate": true,
-        "lineageTag": "bdc80530-f562-4718-869b-36bf809a30c4",
-        "columns": [
-          {
-            "type": "calculatedTableColumn",
-            "name": "Date",
-            "dataType": "dateTime",
-            "isNameInferred": true,
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "sourceColumn": "[Date]",
-            "lineageTag": "eb74e2e6-0792-430e-8b07-37a3d1621984",
-            "dataCategory": "PaddedDateTableDates",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Day",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "DAY([Date])",
-            "lineageTag": "e3c0db2b-d680-406c-b075-54b383382903",
-            "dataCategory": "DayOfMonth",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Month",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "sortByColumn": "MonthNo",
-            "lineageTag": "98fedde6-45cd-4d6a-a3a4-63431918c4fe",
-            "dataCategory": "Months",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "MonthNo",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "MONTH([Date])",
-            "lineageTag": "d75fa027-2478-4857-80c6-03dd17816bdb",
-            "dataCategory": "MonthOfYear",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Quarter",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "\"Qtr \" & [QuarterNo]",
-            "sortByColumn": "QuarterNo",
-            "lineageTag": "81951d26-7a9a-4927-91a8-70a7ec868afa",
-            "dataCategory": "Quarters",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "QuarterNo",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "INT(([MonthNo] + 2) / 3)",
-            "lineageTag": "b86138d4-7961-4778-ac4c-e27c40ac8470",
-            "dataCategory": "QuarterOfYear",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Year",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "YEAR([Date])",
-            "lineageTag": "438a88cd-5e97-4bca-a996-655faaa7e941",
-            "dataCategory": "Years",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "DateTableTemplate_a9f2683a-8127-42a6-85c7-feeb032eb85c-c728043c-06b3-4572-8a07-39a6b8e56903",
-            "mode": "import",
-            "source": {
-              "type": "calculated",
-              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
-            }
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Date Hierarchy",
-            "lineageTag": "4a81f90f-f242-4e1f-b60e-b020a069f2c3",
-            "levels": [
-              {
-                "name": "Year",
-                "ordinal": 0,
-                "column": "Year",
-                "lineageTag": "9916d586-c227-4614-ba20-a126ca3bf1ef"
-              },
-              {
-                "name": "Quarter",
-                "ordinal": 1,
-                "column": "Quarter",
-                "lineageTag": "6e21d5e7-e3c3-4185-a9b3-bcc45c924657"
-              },
-              {
-                "name": "Month",
-                "ordinal": 2,
-                "column": "Month",
-                "lineageTag": "94539fee-955f-4535-9048-508b74149099"
-              },
-              {
-                "name": "Day",
-                "ordinal": 3,
-                "column": "Day",
-                "lineageTag": "99dd486c-89fe-4a30-b498-c30f7dca0d31"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "name": "__PBI_TemplateDateTable",
-            "value": "true"
-          },
-          {
-            "name": "DefaultItem",
-            "value": "DateHierarchy"
-          }
-        ]
-      },
-      {
-        "name": "DimDate",
-        "lineageTag": "b6e3fc69-04cb-4893-ad06-a40dd089d61e",
-        "columns": [
-          {
-            "type": "calculatedTableColumn",
-            "name": "Date",
-            "dataType": "dateTime",
-            "isNameInferred": true,
-            "isDataTypeInferred": true,
-            "sourceColumn": "[Date]",
-            "formatString": "General Date",
-            "lineageTag": "a7c3e6cc-b682-4138-99b7-dc1b5feb4a5e",
-            "summarizeBy": "none",
-            "variations": [
-              {
-                "name": "Variation",
-                "relationship": "68762ef6-bc24-495b-9a03-ccd5cc1dbfba",
-                "defaultHierarchy": {
-                  "table": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23",
-                  "hierarchy": "Date Hierarchy"
-                },
-                "isDefault": true
-              }
-            ],
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "RankXYear",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "RANKX(DimDate,DimDate[YEAR],DimDate[YEAR],DESC,Dense)",
-            "formatString": "0",
-            "lineageTag": "800f89f3-c5f1-405d-9a6f-302cb472a3d2",
-            "summarizeBy": "sum",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "YEAR",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "YEAR(DimDate[Date])",
-            "formatString": "0",
-            "lineageTag": "d257e5b2-3dd4-47a0-b1fb-66246a96b9cb",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "DimDate-08178051-2ff3-4d16-8333-272fc2137ab1",
-            "mode": "import",
-            "source": {
-              "type": "calculated",
-              "expression": "CALENDAR(DATE(2001,1,1), DATE(2019,12,31))"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "PBI_Id",
-            "value": "7bbb002fc6f645bfb898cdbbe0272899"
-          }
-        ]
-      },
-      {
-        "name": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23",
-        "isHidden": true,
-        "showAsVariationsOnly": true,
-        "lineageTag": "ff857aac-440e-428e-967c-73a55ead1e24",
-        "columns": [
-          {
-            "type": "calculatedTableColumn",
-            "name": "Date",
-            "dataType": "dateTime",
-            "isNameInferred": true,
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "sourceColumn": "[Date]",
-            "lineageTag": "7f4fa6a7-c957-44b0-9dbc-c6ca394ebe2f",
-            "dataCategory": "PaddedDateTableDates",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Day",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "DAY([Date])",
-            "lineageTag": "4b1c5248-e4bd-4fc8-a4dd-c814edbf04cf",
-            "dataCategory": "DayOfMonth",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Month",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "sortByColumn": "MonthNo",
-            "lineageTag": "0a7b5985-bd26-4f73-95b2-71edc22a7e35",
-            "dataCategory": "Months",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "MonthNo",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "MONTH([Date])",
-            "lineageTag": "ef615b2b-47b7-4795-8e60-c23803a2363a",
-            "dataCategory": "MonthOfYear",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Quarter",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "\"Qtr \" & [QuarterNo]",
-            "sortByColumn": "QuarterNo",
-            "lineageTag": "b9e3d5fc-a9c9-4569-88fd-4fe385a18875",
-            "dataCategory": "Quarters",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "QuarterNo",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "INT(([MonthNo] + 2) / 3)",
-            "lineageTag": "fa98255a-cbf4-4938-9ce0-c8aac04b0224",
-            "dataCategory": "QuarterOfYear",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Year",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "expression": "YEAR([Date])",
-            "lineageTag": "b5ad0d8c-820d-4559-aeff-3e5e717396c6",
-            "dataCategory": "Years",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23-e3a70a2b-1ebe-4410-9b40-3783698ccb79",
-            "mode": "import",
-            "source": {
-              "type": "calculated",
-              "expression": "Calendar(Date(Year(MIN('DimDate'[Date])), 1, 1), Date(Year(MAX('DimDate'[Date])), 12, 31))"
-            }
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Date Hierarchy",
-            "lineageTag": "f16e5567-1697-48e8-a196-ebf26474bb53",
-            "levels": [
-              {
-                "name": "Year",
-                "ordinal": 0,
-                "column": "Year",
-                "lineageTag": "f26743de-aeb6-41b9-a050-6b8c48084de0"
-              },
-              {
-                "name": "Quarter",
-                "ordinal": 1,
-                "column": "Quarter",
-                "lineageTag": "02721c25-a90e-46db-91e8-315e98b02f71"
-              },
-              {
-                "name": "Month",
-                "ordinal": 2,
-                "column": "Month",
-                "lineageTag": "39b8b254-4f08-4a07-b636-a917102606a7"
-              },
-              {
-                "name": "Day",
-                "ordinal": 3,
-                "column": "Day",
-                "lineageTag": "c08ddb14-108c-4a13-b10c-22ee20d1678e"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "name": "__PBI_LocalDateTable",
-            "value": "true"
-          }
-        ]
-      },
-      {
-        "name": "Sumber Daya Peternakan",
-        "lineageTag": "cd61c823-aaa0-40f2-9f6c-777ff6cdacd4",
-        "columns": [
-          {
-            "name": "Bidang",
-            "dataType": "string",
-            "sourceColumn": "Bidang",
-            "lineageTag": "f3e632d1-eab4-44ff-a075-4fc90767f5f4",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Daging",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": [
-              "",
-              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
-              "        \"BABI\", \"Babi\",",
-              "        \"DAGING BABI\", \"Babi\",",
-              "        \"SAPI POTONG\", \"Sapi\",",
-              "        \"DAGING SAPI\", \"Sapi\",",
-              "        \"KUDA\", \"Kuda\",",
-              "        \"DAGING KUDA\", \"Kuda\",",
-              "        \"AYAM BURAS\", \"Ayam Buras\",",
-              "        \"DAGING AYAM BURAS\", \"Ayam Buras\",",
-              "        \"AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
-              "        \"DAGING AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
-              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"DAGING AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"ITIK\", \"Itik\",",
-              "        \"DAGING ITIK\", \"Itik\",",
-              "        \"ITIK MANILA\", \"Itik Manila\",",
-              "        \"DAGING ITIK MANILA\", \"Itik Manila\",",
-              "        \"KELINCI\", \"Kelinci\",",
-              "        \"DAGING KELINCI\", \"Kelinci\",",
-              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        \"DAGING BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        \"MERPATI\", \"Merpati\",",
-              "        \"DAGING MERPATI\", \"Merpati\",",
-              "        \"KERBAU\", \"Kerbau\",",
-              "        \"DAGING KERBAU\", \"Kerbau\",",
-              "        \"DOMBA\", \"Domba\",",
-              "        \"DAGING DOMBA\", \"Domba\",",
-              "        \"KAMBING\", \"Kambing\",",
-              "        \"DAGING KAMBING\", \"Kambing\",",
-              "        BLANK()",
-              "        )"
-            ],
-            "lineageTag": "b4549fba-5b8c-4b3f-9c28-86e3710e16d5",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Dimensi",
-            "dataType": "string",
-            "sourceColumn": "Dimensi",
-            "lineageTag": "16b34f55-e9b3-4597-93a8-57aa23bfa84c",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Jenis",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": [
-              "",
-              "SWITCH('Sumber Daya Peternakan'[Satuan],",
-              "        \"000 Ekor\", \"Unggas\",",
-              "        \"Ekor\", \"Mamalia\",",
-              "        \"KG\", \"Hasil Sapi Perah\",",
-              "        \"Ton\", \"Hasil Ternak\")"
-            ],
-            "lineageTag": "a22b7d86-5691-47b9-a0e9-efd25c5a5712",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Kabupaten",
-            "dataType": "string",
-            "sourceColumn": "Kabupaten",
-            "lineageTag": "34417b15-899a-4fdb-b5bd-fcc9dfdcdb1e",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Komoditas",
-            "dataType": "string",
-            "sourceColumn": "Komoditas",
-            "lineageTag": "40d71021-f1a6-491f-893a-e5bb075f5259",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Nilai",
-            "dataType": "int64",
-            "sourceColumn": "Nilai",
-            "formatString": "#,0",
-            "lineageTag": "2a11b492-24ab-486a-99b7-d240f91c9be5",
-            "summarizeBy": "sum",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ]
-          },
-          {
-            "name": "Provinsi",
-            "dataType": "string",
-            "sourceColumn": "Provinsi",
-            "lineageTag": "d35cd701-4b62-4b8c-81b8-8e15e87e25ce",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Provinsi/Nasional",
-            "dataType": "string",
-            "sourceColumn": "Provinsi/Nasional",
-            "lineageTag": "9f1213e1-4863-4afd-85ad-766a8c30a57b",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Satuan",
-            "dataType": "string",
-            "sourceColumn": "Satuan",
-            "lineageTag": "0afe9e0a-e3ff-41f9-b933-9b9ada69721f",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Short Year",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": "\"'\"&RIGHT('Sumber Daya Peternakan'[Tahun],2)",
-            "sortByColumn": "Tahun",
-            "lineageTag": "8114f5d9-31dd-4ccd-917c-45977be736a7",
-            "summarizeBy": "none",
-            "changedProperties": [
-              {
-                "property": "SortByColumn"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Tahun",
-            "dataType": "int64",
-            "sourceColumn": "Tahun",
-            "formatString": "0",
-            "lineageTag": "cfce897f-8686-4a6d-bb6c-e526bd4ce85d",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Telur",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": [
-              "",
-              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
-              "        \"AYAM BURAS\", \"Ayam Buras\",",
-              "        \"TELUR AYAM BURAS\", \"Ayam Buras\",",
-              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"TELUR AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"ITIK\", \"Itik\",",
-              "        \"TELUR ITIK\", \"Itik\",",
-              "        \"ITIK MANILA\", \"Itik Manila\",",
-              "        \"TELUR ITIK MANILA\", \"Itik Manila\",",
-              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        \"TELUR BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        BLANK()",
-              "        )"
-            ],
-            "lineageTag": "523bcc65-bc77-43a2-b59b-596500ad9f4a",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Sumber Daya Peternakan-a988a4b7-2065-4fb5-8fe3-48d5aa6d5529",
-            "mode": "import",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Riza\\Downloads\\Sumber Daya Peternakan.csv\"),[Delimiter=\",\", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Bidang\", type text}, {\"Dimensi\", type text}, {\"Level\", type text}, {\"Komoditas\", type text}, {\"Satuan\", type text}, {\"Tahun\", Int64.Type}, {\"Nilai\", Int64.Type}, {\"Kabupaten\", type text}}),",
-                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each true),",
-                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each [Tahun] > 2000),",
-                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Filtered Rows1\",{{\"Level\", \"Provinsi/Nasional\"}}),",
-                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Renamed Columns\", each true),",
-                "    #\"Inserted Text After Delimiter\" = Table.AddColumn(#\"Filtered Rows2\", \"Text After Delimiter\", each Text.AfterDelimiter([#\"Provinsi/Nasional\"], \" \"), type text),",
-                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Inserted Text After Delimiter\",{{\"Text After Delimiter\", \"Provinsi\"}}),",
-                "    #\"Filtered Rows3\" = Table.SelectRows(#\"Renamed Columns1\", each [Tahun] > 2000 and [Tahun] <= 2019),",
-                "    #\"Filtered Rows4\" = Table.SelectRows(#\"Filtered Rows3\", each true)",
-                "in",
-                "    #\"Filtered Rows4\""
-              ]
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Nilai_Kerbau",
-            "expression": "IF(CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\"))=BLANK(),0, CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\")))",
-            "formatString": "#,0",
-            "lineageTag": "241d0e20-3368-4ba1-b986-3a67cd3f016b",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "Value",
-            "expression": "IF(SELECTEDVALUE('Sumber Daya Peternakan'[Provinsi])=BLANK(),0, SUM('Sumber Daya Peternakan'[Nilai]))",
-            "formatString": "#,0",
-            "lineageTag": "11785d3b-4819-44ca-8789-6abe90600987",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "Top5Text",
-            "expression": [
-              "",
-              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "return \"TOP 5 PETERNAKAN \" & mmlia"
-            ],
-            "lineageTag": "52273238-7076-49a4-a904-b93e9b82e846"
-          },
-          {
-            "name": "Bot5Text",
-            "expression": [
-              "",
-              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "return \"BOTTOM 5 PETERNAKAN \" & mmlia"
-            ],
-            "lineageTag": "db9c4bf7-ff26-4571-8f7f-91c9b02c2d45"
-          },
-          {
-            "name": "TotalText",
-            "expression": [
-              "",
-              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "return \"TOTAL PETERNAKAN \" & mmlia"
-            ],
-            "lineageTag": "b6b567a2-2621-45bc-81f0-992f571c2421"
-          },
-          {
-            "name": "#YTD_V",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "RETURN",
-              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "035ce890-f536-4e5c-b026-7e32fab0bc59",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "#LYTD_V",
-            "expression": [
-              "",
-              "VAR A = MAX(DimDate[YEAR])",
-              "VAR B = A-1",
-              "RETURN",
-              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "55d735ff-54fb-4e63-881f-26ee729beff5",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "TextLastYear",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "VAR B = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))",
-              "VAR C = A-1",
-              "VAR D = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "RETURN",
-              "\"LAST YEAR (\"&C&\")\"",
-              "--\"PETERNAKAN \"&D&\" LAST YEAR (\" & C &\")\""
-            ],
-            "lineageTag": "d9fb9684-097e-4c58-9786-589c85818fca"
-          },
-          {
-            "name": "TextThisYear",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "var B = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "RETURN",
-              "\"DATA TERAKHIR (\" &A&\")\"",
-              "--\"PETERNAKAN \" &B& \" DARI DATA TERAKHIR (\" & A &\")\""
-            ],
-            "lineageTag": "48a06354-0d85-45c3-9647-655797f99641"
-          },
-          {
-            "name": "#Growth",
-            "expression": [
-              "",
-              "VAR A = IFERROR(([#YTD_V]-[#LYTD_V])/[#LYTD_V],0)",
-              "RETURN",
-              "A"
-            ],
-            "lineageTag": "d3014b4e-15b4-42fb-8f65-684522d604d5",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ]
-          },
-          {
-            "name": "TextGrowth",
-            "expression": [
-              "",
-              "\"Growth %\""
-            ],
-            "lineageTag": "da5187b0-3838-47e6-9b4b-df31ec83f922"
-          },
-          {
-            "name": "Total Nilai",
-            "expression": "SUM('Sumber Daya Peternakan'[Nilai])",
-            "lineageTag": "4841ceff-863a-4c75-acbe-c06417a16839",
-            "formatStringDefinition": {
-              "expression": [
-                "VAR A = SELECTEDMEASURE()",
-                "return",
-                "SWITCH(TRUE(),",
-                "A<1000,\"0\",",
-                "A<1000000,\"#,.0K\",",
-                "A<1000000000,\"#,,.0M\",",
-                "A>=1000000000,\"#,,,.0B\")"
-              ]
-            },
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "#TextYTD",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "VAR B = MAX('Sumber Daya Peternakan'[Tahun])-1",
-              "RETURN",
-              "A&\" vs LY\""
-            ],
-            "lineageTag": "708d7f59-cf23-44ed-8cb5-6bcf8a76198f"
-          },
-          {
-            "name": "#TextLY",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])-1",
-              "RETURN",
-              "\"(\"&A&\")\""
-            ],
-            "lineageTag": "ab7b6424-b5b8-4fc9-8d5f-69c952d67504"
-          },
-          {
-            "name": "#Value",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Satuan]<>\"KG\"))",
-            "formatString": "0",
-            "lineageTag": "ee5e0e3d-7458-40f2-b6db-d100b95532bc"
-          },
-          {
-            "name": "Date of Max",
-            "expression": [
-              "",
-              "Var __SelectedMax =",
-              " CALCULATE(",
-              "   MAX( 'Sumber Daya Peternakan'[Nilai]),",
-              "    ALLSELECTED(DimDate)",
-              ")",
-              "",
-              "RETURN ",
-              "",
-              "CALCULATE(",
-              "    VALUES(DimDate[YEAR]),",
-              "        FILTER(",
-              "            ALL( DimDate),",
-              "            [Max] = __SelectedMax )",
-              ")"
-            ],
-            "lineageTag": "6d8ed4f6-245d-4ede-9a5e-7b89e0619896"
-          },
-          {
-            "name": "Max",
-            "expression": "MAX('Sumber Daya Peternakan'[Nilai])",
-            "formatString": "0",
-            "lineageTag": "00feea4a-2fcd-416a-9ca3-8429f54e3445"
-          },
-          {
-            "name": "Measure for a Card",
-            "expression": "\"Produksi tertinggi dengan nilai \"&[MaxProduksiTahun]&\" Pada tahun \"& [Date of Max]",
-            "lineageTag": "a1e812a5-2619-4b3f-861f-065e1e730354"
-          },
-          {
-            "name": "MaxProduksiTahun",
-            "expression": [
-              "",
-              "var tbl = SUMMARIZE('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun],\"Total Nilai\",SUM('Sumber Daya Peternakan'[Nilai]))",
-              "return",
-              "MAXX(tbl,[Total Nilai])"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "47e57cd4-aa91-4f14-bf01-f4abf656dd53"
-          },
-          {
-            "name": "maxx",
-            "expression": [
-              "",
-              ""
-            ],
-            "formatString": "0",
-            "lineageTag": "0abdee06-ff77-4bf0-9b9f-b73b7d8d4f7b"
-          },
-          {
-            "name": "Produksi/Populasi",
-            "expression": [
-              "",
-              "VAR ton = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
-              "VAR pop = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))",
-              "RETURN",
-              "ton/pop"
-            ],
-            "formatString": "#,0.00",
-            "lineageTag": "2885f667-cb68-499d-ae9b-9b67ff6b00b8"
-          },
-          {
-            "name": "#YTD_G",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "RETURN",
-              "CALCULATE([#Production_V],FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
-            ],
-            "lineageTag": "59e22d8f-cc56-41e4-9e02-79fb0b1751c3",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ]
-          },
-          {
-            "name": "#LYTD_G",
-            "expression": [
-              "",
-              "VAR A = MAX(DimDate[YEAR])",
-              "VAR B = A-1",
-              "RETURN",
-              "CALCULATE([#Production_V],FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
-            ],
-            "lineageTag": "e7a261bd-cd11-419e-af3c-28fa416f62f3",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ]
-          },
-          {
-            "name": "#Growth_Pro/Pop",
-            "expression": "IFERROR(([#YTD_G]-[#LYTD_G])/[#LYTD_G],0)",
-            "formatString": "#,0.00%;-#,0.00%;#,0.00%",
-            "lineageTag": "72a09444-de5b-4c68-9207-c29cf521ffab"
-          },
-          {
-            "name": "#Production_V",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
-            "formatString": "#,0",
-            "lineageTag": "7ac55094-487a-4856-9a87-a0728bcaa593"
-          },
-          {
-            "name": "#LC_Production",
-            "expression": "IF(DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])<=1,CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),ALL('Sumber Daya Peternakan'[Tahun])),CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\")))",
-            "formatString": "0",
-            "lineageTag": "cd4a7162-6b8e-46ae-bed1-f0145e626c6d"
-          },
-          {
-            "name": "#Population_V",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))/100",
-            "formatString": "#,0",
-            "lineageTag": "c719246e-698f-4865-a22a-c00c4c1f948b"
-          },
-          {
-            "name": "#Count",
-            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])",
-            "formatString": "0",
-            "lineageTag": "d78e7269-914a-48d3-8007-d0187fed1ef3"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Hirarki Provinsi",
-            "lineageTag": "1489907a-f76c-4a0d-839f-33c6305827c2",
-            "levels": [
-              {
-                "name": "Provinsi/Nasional",
-                "ordinal": 0,
-                "column": "Provinsi/Nasional",
-                "lineageTag": "eb802f68-3231-45dc-be12-82fdb7da5a99"
-              },
-              {
-                "name": "Kabupaten",
-                "ordinal": 1,
-                "column": "Kabupaten",
-                "lineageTag": "ab3cdf50-f95c-4efa-ae65-df623d6dbc66"
-              }
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ]
-      },
-      {
-        "name": "Sumber Daya Peternakan copy",
-        "lineageTag": "dd249d13-8b3e-4633-84b2-7eac4ee4268e",
-        "columns": [
-          {
-            "name": "Bidang",
-            "dataType": "string",
-            "sourceColumn": "Bidang",
-            "lineageTag": "22abecb9-de5c-429c-a843-3f3146ea99d0",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Daging",
-            "dataType": "unknown",
-            "isDataTypeInferred": true,
-            "expression": [
-              "",
-              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
-              "        \"BABI\", \"Babi\",",
-              "        \"DAGING BABI\", \"Babi\",",
-              "        \"SAPI POTONG\", \"Sapi\",",
-              "        \"DAGING SAPI\", \"Sapi\",",
-              "        \"KUDA\", \"Kuda\",",
-              "        \"DAGING KUDA\", \"Kuda\",",
-              "        \"AYAM BURAS\", \"Ayam Buras\",",
-              "        \"DAGING AYAM BURAS\", \"Ayam Buras\",",
-              "        \"AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
-              "        \"DAGING AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
-              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"DAGING AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"ITIK\", \"Itik\",",
-              "        \"DAGING ITIK\", \"Itik\",",
-              "        \"ITIK MANILA\", \"Itik Manila\",",
-              "        \"DAGING ITIK MANILA\", \"Itik Manila\",",
-              "        \"KELINCI\", \"Kelinci\",",
-              "        \"DAGING KELINCI\", \"Kelinci\",",
-              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        \"DAGING BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        \"MERPATI\", \"Merpati\",",
-              "        \"DAGING MERPATI\", \"Merpati\",",
-              "        \"KERBAU\", \"Kerbau\",",
-              "        \"DAGING KERBAU\", \"Kerbau\",",
-              "        \"DOMBA\", \"Domba\",",
-              "        \"DAGING DOMBA\", \"Domba\",",
-              "        \"KAMBING\", \"Kambing\",",
-              "        \"DAGING KAMBING\", \"Kambing\",",
-              "        BLANK()",
-              "        )"
-            ],
-            "lineageTag": "c02efdad-be52-45dd-9277-630ad09d27ba",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Dimensi",
-            "dataType": "string",
-            "sourceColumn": "Dimensi",
-            "lineageTag": "a36c54af-26a4-4d28-8474-1f89f3466ec4",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Jenis",
-            "dataType": "unknown",
-            "isDataTypeInferred": true,
-            "expression": [
-              "",
-              "SWITCH('Sumber Daya Peternakan'[Satuan],",
-              "        \"000 Ekor\", \"Unggas\",",
-              "        \"Ekor\", \"Mamalia\",",
-              "        \"KG\", \"Hasil Sapi Perah\",",
-              "        \"Ton\", \"Hasil Ternak\")"
-            ],
-            "lineageTag": "43241274-181c-4480-b425-1a655da367ae",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Kabupaten",
-            "dataType": "string",
-            "sourceColumn": "Kabupaten",
-            "lineageTag": "d9e05327-70ce-4fec-a03a-488fc4a248aa",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Komoditas",
-            "dataType": "string",
-            "sourceColumn": "Komoditas",
-            "lineageTag": "0817ee34-914e-4567-9339-e2e4f12b20ed",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Nilai",
-            "dataType": "int64",
-            "sourceColumn": "Nilai",
-            "formatString": "#,0",
-            "lineageTag": "dbc8afa8-c1b9-447c-bdcc-1ddfe011d3cc",
-            "summarizeBy": "sum",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ]
-          },
-          {
-            "name": "Provinsi",
-            "dataType": "string",
-            "sourceColumn": "Provinsi",
-            "lineageTag": "bc2a056f-e447-4ad5-acc5-7edc6f9bb7a5",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Provinsi/Nasional",
-            "dataType": "string",
-            "sourceColumn": "Provinsi/Nasional",
-            "lineageTag": "5635c1dc-0006-4823-b583-8ace182ee4f8",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Satuan",
-            "dataType": "string",
-            "sourceColumn": "Satuan",
-            "lineageTag": "3cfc85ad-817f-448b-b41c-150ed74ee200",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Short Year",
-            "dataType": "unknown",
-            "isDataTypeInferred": true,
-            "expression": "\"'\"&RIGHT('Sumber Daya Peternakan'[Tahun],2)",
-            "sortByColumn": "Tahun",
-            "lineageTag": "0cc835e0-d233-405d-8288-d2322085035b",
-            "summarizeBy": "none",
-            "changedProperties": [
-              {
-                "property": "SortByColumn"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          },
-          {
-            "name": "Tahun",
-            "dataType": "int64",
-            "sourceColumn": "Tahun",
-            "formatString": "0",
-            "lineageTag": "5149a1c1-1d6b-45e3-83e8-4384e85f73d3",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Telur",
-            "dataType": "unknown",
-            "isDataTypeInferred": true,
-            "expression": [
-              "",
-              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
-              "        \"AYAM BURAS\", \"Ayam Buras\",",
-              "        \"TELUR AYAM BURAS\", \"Ayam Buras\",",
-              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"TELUR AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
-              "        \"ITIK\", \"Itik\",",
-              "        \"TELUR ITIK\", \"Itik\",",
-              "        \"ITIK MANILA\", \"Itik Manila\",",
-              "        \"TELUR ITIK MANILA\", \"Itik Manila\",",
-              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        \"TELUR BURUNG PUYUH\", \"Burung Puyuh\",",
-              "        BLANK()",
-              "        )"
-            ],
-            "lineageTag": "1b99201e-9f2c-4c8f-88cd-0adcbfe0307e",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Sumber Daya Peternakan-a988a4b7-2065-4fb5-8fe3-48d5aa6d5529",
-            "mode": "import",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Riza\\Downloads\\Sumber Daya Peternakan.csv\"),[Delimiter=\",\", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Bidang\", type text}, {\"Dimensi\", type text}, {\"Level\", type text}, {\"Komoditas\", type text}, {\"Satuan\", type text}, {\"Tahun\", Int64.Type}, {\"Nilai\", Int64.Type}, {\"Kabupaten\", type text}}),",
-                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each true),",
-                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each [Tahun] > 2000),",
-                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Filtered Rows1\",{{\"Level\", \"Provinsi/Nasional\"}}),",
-                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Renamed Columns\", each true),",
-                "    #\"Inserted Text After Delimiter\" = Table.AddColumn(#\"Filtered Rows2\", \"Text After Delimiter\", each Text.AfterDelimiter([#\"Provinsi/Nasional\"], \" \"), type text),",
-                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Inserted Text After Delimiter\",{{\"Text After Delimiter\", \"Provinsi\"}}),",
-                "    #\"Filtered Rows3\" = Table.SelectRows(#\"Renamed Columns1\", each [Tahun] > 2000 and [Tahun] <= 2019),",
-                "    #\"Filtered Rows4\" = Table.SelectRows(#\"Filtered Rows3\", each true)",
-                "in",
-                "    #\"Filtered Rows4\""
-              ]
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Nilai_Kerbau 1",
-            "expression": "IF(CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\"))=BLANK(),0, CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\")))",
-            "formatString": "#,0",
-            "lineageTag": "e1fbefba-ef0e-45f0-b3fc-228542fd052c",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "Value 1",
-            "expression": "IF(SELECTEDVALUE('Sumber Daya Peternakan'[Provinsi])=BLANK(),0, SUM('Sumber Daya Peternakan'[Nilai]))",
-            "formatString": "#,0",
-            "lineageTag": "7d8fda72-8b5e-4eb4-82a4-091fe68ce9ea",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "Top5Text 1",
-            "expression": [
-              "",
-              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "return \"TOP 5 PETERNAKAN \" & mmlia"
-            ],
-            "lineageTag": "ab22f62d-f233-4982-90f6-ae20cd047146"
-          },
-          {
-            "name": "Bot5Text 1",
-            "expression": [
-              "",
-              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "return \"BOTTOM 5 PETERNAKAN \" & mmlia"
-            ],
-            "lineageTag": "d5fd4238-ccf2-4215-a7f6-7fc496d378e1"
-          },
-          {
-            "name": "TotalText 1",
-            "expression": [
-              "",
-              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "return \"TOTAL PETERNAKAN \" & mmlia"
-            ],
-            "lineageTag": "22fa3ddf-0846-4fe3-b8a6-097614fbb163"
-          },
-          {
-            "name": "#YTD_V 1",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "RETURN",
-              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "2a7066df-f893-41b7-84e9-2c42c50d3559",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "#LYTD_V 1",
-            "expression": [
-              "",
-              "VAR A = MAX(DimDate[YEAR])",
-              "VAR B = A-1",
-              "RETURN",
-              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "f019b6ff-9d71-4d89-8292-ecd795fe6fea",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "TextLastYear 1",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "VAR B = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))",
-              "VAR C = A-1",
-              "VAR D = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "RETURN",
-              "\"LAST YEAR (\"&C&\")\"",
-              "--\"PETERNAKAN \"&D&\" LAST YEAR (\" & C &\")\""
-            ],
-            "lineageTag": "b29527f4-b830-425d-878e-85657a88f049"
-          },
-          {
-            "name": "TextThisYear 1",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "var B = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
-              "RETURN",
-              "\"DATA TERAKHIR (\" &A&\")\"",
-              "--\"PETERNAKAN \" &B& \" DARI DATA TERAKHIR (\" & A &\")\""
-            ],
-            "lineageTag": "4914c8b4-c045-470c-8015-e16183f639c5"
-          },
-          {
-            "name": "#Growth 1",
-            "expression": [
-              "",
-              "VAR A = IFERROR(([#YTD_V]-[#LYTD_V])/[#LYTD_V],0)",
-              "RETURN",
-              "A"
-            ],
-            "lineageTag": "24632ef0-d7d0-4515-8d4f-fa7f1e9b5fb6",
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ],
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ]
-          },
-          {
-            "name": "TextGrowth 1",
-            "expression": [
-              "",
-              "\"Growth %\""
-            ],
-            "lineageTag": "c3759f42-40f9-4f5a-85c1-2404e279e17a"
-          },
-          {
-            "name": "Total Nilai 1",
-            "expression": "SUM('Sumber Daya Peternakan'[Nilai])",
-            "lineageTag": "1f97e217-b823-4d7f-8b24-654207a765cc",
-            "formatStringDefinition": {
-              "expression": [
-                "VAR A = SELECTEDMEASURE()",
-                "return",
-                "SWITCH(TRUE(),",
-                "A<1000,\"0\",",
-                "A<1000000,\"#,.0K\",",
-                "A<1000000000,\"#,,.0M\",",
-                "A>=1000000000,\"#,,,.0B\")"
-              ]
-            },
-            "changedProperties": [
-              {
-                "property": "FormatString"
-              }
-            ]
-          },
-          {
-            "name": "#TextYTD 1",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "VAR B = MAX('Sumber Daya Peternakan'[Tahun])-1",
-              "RETURN",
-              "A&\" vs LY\""
-            ],
-            "lineageTag": "981a90d3-b14a-43a5-a806-780d77ff8e8b"
-          },
-          {
-            "name": "#TextLY 1",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])-1",
-              "RETURN",
-              "\"(\"&A&\")\""
-            ],
-            "lineageTag": "63c0cecb-7be1-4f68-a2f3-6d1e184b9fae"
-          },
-          {
-            "name": "#Value 1",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Satuan]<>\"KG\"))",
-            "formatString": "0",
-            "lineageTag": "856e41fd-e9b9-42e3-9ffd-ea92f1fd54bc"
-          },
-          {
-            "name": "Date of Max 1",
-            "expression": [
-              "",
-              "Var __SelectedMax =",
-              " CALCULATE(",
-              "   MAX( 'Sumber Daya Peternakan'[Nilai]),",
-              "    ALLSELECTED(DimDate)",
-              ")",
-              "",
-              "RETURN ",
-              "",
-              "CALCULATE(",
-              "    VALUES(DimDate[YEAR]),",
-              "        FILTER(",
-              "            ALL( DimDate),",
-              "            [Max] = __SelectedMax )",
-              ")"
-            ],
-            "lineageTag": "4766bf5c-d43e-4c19-983e-de30bfd055da"
-          },
-          {
-            "name": "Max 1",
-            "expression": "MAX('Sumber Daya Peternakan'[Nilai])",
-            "formatString": "0",
-            "lineageTag": "33d6b4c7-6f14-473f-b0e2-51c685a7361b"
-          },
-          {
-            "name": "Measure for a Card 1",
-            "expression": "\"Produksi tertinggi dengan nilai \"&[MaxProduksiTahun]&\" Pada tahun \"& [Date of Max]",
-            "lineageTag": "37a4e66b-6356-41d8-89c9-cfae67ae2f95"
-          },
-          {
-            "name": "MaxProduksiTahun 1",
-            "expression": [
-              "",
-              "var tbl = SUMMARIZE('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun],\"Total Nilai\",SUM('Sumber Daya Peternakan'[Nilai]))",
-              "return",
-              "MAXX(tbl,[Total Nilai])"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "e1807843-379f-4473-8b71-e896992a19c3"
-          },
-          {
-            "name": "maxx 1",
-            "expression": [
-              "",
-              ""
-            ],
-            "formatString": "0",
-            "lineageTag": "b0499816-9fd3-4e6a-bd0b-62f6d3f8eea0"
-          },
-          {
-            "name": "Produksi/Populasi 1",
-            "expression": [
-              "",
-              "VAR ton = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
-              "VAR pop = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))",
-              "RETURN",
-              "ton/pop"
-            ],
-            "formatString": "#,0.00",
-            "lineageTag": "a152c1b3-98d1-44fc-871b-c09c996c3070"
-          },
-          {
-            "name": "#YTD_G 1",
-            "expression": [
-              "",
-              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
-              "RETURN",
-              "CALCULATE([#Production_V],FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
-            ],
-            "lineageTag": "21eee205-bcd4-49d8-ba89-3e035c4c5928",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ]
-          },
-          {
-            "name": "#LYTD_G 1",
-            "expression": [
-              "",
-              "VAR A = MAX(DimDate[YEAR])",
-              "VAR B = A-1",
-              "RETURN",
-              "CALCULATE([#Production_V],FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
-            ],
-            "lineageTag": "41d6c89e-8662-463c-b512-b7aabbb90f98",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ]
-          },
-          {
-            "name": "#Growth_Pro/Pop 1",
-            "expression": "IFERROR(([#YTD_G]-[#LYTD_G])/[#LYTD_G],0)",
-            "formatString": "#,0.00%;-#,0.00%;#,0.00%",
-            "lineageTag": "bbf4a987-5b22-4fb2-a92c-4f7eff4f686e"
-          },
-          {
-            "name": "#Production_V 1",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
-            "formatString": "#,0",
-            "lineageTag": "ee23108e-3d90-45a0-908a-fe4f99c8c125"
-          },
-          {
-            "name": "#LC_Production 1",
-            "expression": "IF(DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])<=1,CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),ALL('Sumber Daya Peternakan'[Tahun])),CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\")))",
-            "formatString": "0",
-            "lineageTag": "3b0b95a2-ea1c-46f9-a9c2-cb27394bb909"
-          },
-          {
-            "name": "#Population_V 1",
-            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))/100",
-            "formatString": "#,0",
-            "lineageTag": "1c1e0572-7788-4391-939b-ac0188e15a17"
-          },
-          {
-            "name": "#Count 1",
-            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])",
-            "formatString": "0",
-            "lineageTag": "d0e1c179-f404-4683-ba9c-42c91aa43980"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Hirarki Provinsi",
-            "lineageTag": "78776af8-406c-471c-947b-4f2a4bf3b087",
-            "levels": [
-              {
-                "name": "Provinsi/Nasional",
-                "ordinal": 0,
-                "column": "Provinsi/Nasional",
-                "lineageTag": "4699e153-ac22-45eb-9021-c1bc97e965cd"
-              },
-              {
-                "name": "Kabupaten",
-                "ordinal": 1,
-                "column": "Kabupaten",
-                "lineageTag": "bd3c1e3e-a588-4fad-b995-9b58fe27ccf8"
-              }
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ]
-      }
-    ],
-    "relationships": [
-      {
-        "name": "68762ef6-bc24-495b-9a03-ccd5cc1dbfba",
-        "fromTable": "DimDate",
-        "fromColumn": "Date",
-        "toTable": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23",
-        "toColumn": "Date",
-        "joinOnDateBehavior": "datePartOnly"
-      },
-      {
-        "name": "1c50ec1a-3ed5-4c38-afab-02146a384dd4",
-        "toCardinality": "many",
-        "fromTable": "Sumber Daya Peternakan",
-        "fromColumn": "Tahun",
-        "toTable": "DimDate",
-        "toColumn": "YEAR",
-        "crossFilteringBehavior": "bothDirections"
-      }
-    ],
     "cultures": [
       {
         "name": "en-US",
@@ -4843,22 +3083,1157 @@
         }
       }
     ],
-    "annotations": [
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
       {
-        "name": "PBI_QueryOrder",
-        "value": "[\"Sumber Daya Peternakan\"]"
+        "name": "68762ef6-bc24-495b-9a03-ccd5cc1dbfba",
+        "fromColumn": "Date",
+        "fromTable": "DimDate",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23"
       },
       {
-        "name": "__PBI_TimeIntelligenceEnabled",
-        "value": "1"
+        "name": "1c50ec1a-3ed5-4c38-afab-02146a384dd4",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Tahun",
+        "fromTable": "Sumber Daya Peternakan",
+        "toCardinality": "many",
+        "toColumn": "YEAR",
+        "toTable": "DimDate"
+      }
+    ],
+    "sourceQueryCulture": "en-ID",
+    "tables": [
+      {
+        "name": "DateTableTemplate_a9f2683a-8127-42a6-85c7-feeb032eb85c",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "eb74e2e6-0792-430e-8b07-37a3d1621984",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e3c0db2b-d680-406c-b075-54b383382903",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "98fedde6-45cd-4d6a-a3a4-63431918c4fe",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "d75fa027-2478-4857-80c6-03dd17816bdb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "81951d26-7a9a-4927-91a8-70a7ec868afa",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b86138d4-7961-4778-ac4c-e27c40ac8470",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "438a88cd-5e97-4bca-a996-655faaa7e941",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9916d586-c227-4614-ba20-a126ca3bf1ef",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "6e21d5e7-e3c3-4185-a9b3-bcc45c924657",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "94539fee-955f-4535-9048-508b74149099",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "99dd486c-89fe-4a30-b498-c30f7dca0d31",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "4a81f90f-f242-4e1f-b60e-b020a069f2c3"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "bdc80530-f562-4718-869b-36bf809a30c4",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_a9f2683a-8127-42a6-85c7-feeb032eb85c-c728043c-06b3-4572-8a07-39a6b8e56903",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
       },
       {
-        "name": "PBIDesktopVersion",
-        "value": "2.118.828.0 (23.06)"
+        "name": "DimDate",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "7bbb002fc6f645bfb898cdbbe0272899"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "a7c3e6cc-b682-4138-99b7-dc1b5feb4a5e",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23"
+                },
+                "isDefault": true,
+                "relationship": "68762ef6-bc24-495b-9a03-ccd5cc1dbfba"
+              }
+            ]
+          },
+          {
+            "name": "RankXYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "RANKX(DimDate,DimDate[YEAR],DimDate[YEAR],DESC,Dense)",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "800f89f3-c5f1-405d-9a6f-302cb472a3d2",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "YEAR(DimDate[Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "d257e5b2-3dd4-47a0-b1fb-66246a96b9cb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "b6e3fc69-04cb-4893-ad06-a40dd089d61e",
+        "partitions": [
+          {
+            "name": "DimDate-08178051-2ff3-4d16-8333-272fc2137ab1",
+            "mode": "import",
+            "source": {
+              "expression": "CALENDAR(DATE(2001,1,1), DATE(2019,12,31))",
+              "type": "calculated"
+            }
+          }
+        ]
       },
       {
-        "name": "PBI_ProTooling",
-        "value": "[\"DevMode\"]"
+        "name": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "7f4fa6a7-c957-44b0-9dbc-c6ca394ebe2f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "4b1c5248-e4bd-4fc8-a4dd-c814edbf04cf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "0a7b5985-bd26-4f73-95b2-71edc22a7e35",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "ef615b2b-47b7-4795-8e60-c23803a2363a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b9e3d5fc-a9c9-4569-88fd-4fe385a18875",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "fa98255a-cbf4-4938-9ce0-c8aac04b0224",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b5ad0d8c-820d-4559-aeff-3e5e717396c6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f26743de-aeb6-41b9-a050-6b8c48084de0",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "02721c25-a90e-46db-91e8-315e98b02f71",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "39b8b254-4f08-4a07-b636-a917102606a7",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "c08ddb14-108c-4a13-b10c-22ee20d1678e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "f16e5567-1697-48e8-a196-ebf26474bb53"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "ff857aac-440e-428e-967c-73a55ead1e24",
+        "partitions": [
+          {
+            "name": "LocalDateTable_e62833cc-c474-47bb-a190-63d23b17eb23-e3a70a2b-1ebe-4410-9b40-3783698ccb79",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('DimDate'[Date])), 1, 1), Date(Year(MAX('DimDate'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Sumber Daya Peternakan",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Bidang",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f3e632d1-eab4-44ff-a075-4fc90767f5f4",
+            "sourceColumn": "Bidang",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Daging",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
+              "        \"BABI\", \"Babi\",",
+              "        \"DAGING BABI\", \"Babi\",",
+              "        \"SAPI POTONG\", \"Sapi\",",
+              "        \"DAGING SAPI\", \"Sapi\",",
+              "        \"KUDA\", \"Kuda\",",
+              "        \"DAGING KUDA\", \"Kuda\",",
+              "        \"AYAM BURAS\", \"Ayam Buras\",",
+              "        \"DAGING AYAM BURAS\", \"Ayam Buras\",",
+              "        \"AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
+              "        \"DAGING AYAM RAS PEDAGING\", \"Ayam Ras Pedaging\",",
+              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"DAGING AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"ITIK\", \"Itik\",",
+              "        \"DAGING ITIK\", \"Itik\",",
+              "        \"ITIK MANILA\", \"Itik Manila\",",
+              "        \"DAGING ITIK MANILA\", \"Itik Manila\",",
+              "        \"KELINCI\", \"Kelinci\",",
+              "        \"DAGING KELINCI\", \"Kelinci\",",
+              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        \"DAGING BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        \"MERPATI\", \"Merpati\",",
+              "        \"DAGING MERPATI\", \"Merpati\",",
+              "        \"KERBAU\", \"Kerbau\",",
+              "        \"DAGING KERBAU\", \"Kerbau\",",
+              "        \"DOMBA\", \"Domba\",",
+              "        \"DAGING DOMBA\", \"Domba\",",
+              "        \"KAMBING\", \"Kambing\",",
+              "        \"DAGING KAMBING\", \"Kambing\",",
+              "        BLANK()",
+              "        )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "b4549fba-5b8c-4b3f-9c28-86e3710e16d5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dimensi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "16b34f55-e9b3-4597-93a8-57aa23bfa84c",
+            "sourceColumn": "Dimensi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Jenis",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Sumber Daya Peternakan'[Satuan],",
+              "        \"000 Ekor\", \"Unggas\",",
+              "        \"Ekor\", \"Mamalia\",",
+              "        \"KG\", \"Hasil Sapi Perah\",",
+              "        \"Ton\", \"Hasil Ternak\")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "a22b7d86-5691-47b9-a0e9-efd25c5a5712",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Kabupaten",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "34417b15-899a-4fdb-b5bd-fcc9dfdcdb1e",
+            "sourceColumn": "Kabupaten",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Komoditas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "40d71021-f1a6-491f-893a-e5bb075f5259",
+            "sourceColumn": "Komoditas",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nilai",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDecimal\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "2a11b492-24ab-486a-99b7-d240f91c9be5",
+            "sourceColumn": "Nilai",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Provinsi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d35cd701-4b62-4b8c-81b8-8e15e87e25ce",
+            "sourceColumn": "Provinsi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Provinsi/Nasional",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9f1213e1-4863-4afd-85ad-766a8c30a57b",
+            "sourceColumn": "Provinsi/Nasional",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Satuan",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0afe9e0a-e3ff-41f9-b933-9b9ada69721f",
+            "sourceColumn": "Satuan",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Short Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "expression": "\"'\"&RIGHT('Sumber Daya Peternakan'[Tahun],2)",
+            "isDataTypeInferred": true,
+            "lineageTag": "8114f5d9-31dd-4ccd-917c-45977be736a7",
+            "sortByColumn": "Tahun",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Tahun",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cfce897f-8686-4a6d-bb6c-e526bd4ce85d",
+            "sourceColumn": "Tahun",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Telur",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Sumber Daya Peternakan'[Komoditas],",
+              "        \"AYAM BURAS\", \"Ayam Buras\",",
+              "        \"TELUR AYAM BURAS\", \"Ayam Buras\",",
+              "        \"AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"TELUR AYAM RAS PETELUR\", \"Ayam Ras Petelur\",",
+              "        \"ITIK\", \"Itik\",",
+              "        \"TELUR ITIK\", \"Itik\",",
+              "        \"ITIK MANILA\", \"Itik Manila\",",
+              "        \"TELUR ITIK MANILA\", \"Itik Manila\",",
+              "        \"BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        \"TELUR BURUNG PUYUH\", \"Burung Puyuh\",",
+              "        BLANK()",
+              "        )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "523bcc65-bc77-43a2-b59b-596500ad9f4a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hirarki Provinsi",
+            "levels": [
+              {
+                "name": "Provinsi/Nasional",
+                "column": "Provinsi/Nasional",
+                "lineageTag": "eb802f68-3231-45dc-be12-82fdb7da5a99",
+                "ordinal": 0
+              },
+              {
+                "name": "Kabupaten",
+                "column": "Kabupaten",
+                "lineageTag": "ab3cdf50-f95c-4efa-ae65-df623d6dbc66",
+                "ordinal": 1
+              }
+            ],
+            "lineageTag": "1489907a-f76c-4a0d-839f-33c6305827c2"
+          }
+        ],
+        "lineageTag": "cd61c823-aaa0-40f2-9f6c-777ff6cdacd4",
+        "measures": [
+          {
+            "name": "Nilai_Kerbau",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "IF(CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\"))=BLANK(),0, CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]), FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Komoditas]=\"KERBAU\")))",
+            "formatString": "#,0",
+            "lineageTag": "241d0e20-3368-4ba1-b986-3a67cd3f016b"
+          },
+          {
+            "name": "Value",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "IF(SELECTEDVALUE('Sumber Daya Peternakan'[Provinsi])=BLANK(),0, SUM('Sumber Daya Peternakan'[Nilai]))",
+            "formatString": "#,0",
+            "lineageTag": "11785d3b-4819-44ca-8789-6abe90600987"
+          },
+          {
+            "name": "Top5Text",
+            "expression": [
+              "",
+              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "return \"TOP 5 PETERNAKAN \" & mmlia"
+            ],
+            "lineageTag": "52273238-7076-49a4-a904-b93e9b82e846"
+          },
+          {
+            "name": "Bot5Text",
+            "expression": [
+              "",
+              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "return \"BOTTOM 5 PETERNAKAN \" & mmlia"
+            ],
+            "lineageTag": "db9c4bf7-ff26-4571-8f7f-91c9b02c2d45"
+          },
+          {
+            "name": "TotalText",
+            "expression": [
+              "",
+              "var mmlia = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "return \"TOTAL PETERNAKAN \" & mmlia"
+            ],
+            "lineageTag": "b6b567a2-2621-45bc-81f0-992f571c2421"
+          },
+          {
+            "name": "#YTD_V",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "RETURN",
+              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "035ce890-f536-4e5c-b026-7e32fab0bc59"
+          },
+          {
+            "name": "#LYTD_V",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX(DimDate[YEAR])",
+              "VAR B = A-1",
+              "RETURN",
+              "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "55d735ff-54fb-4e63-881f-26ee729beff5"
+          },
+          {
+            "name": "TextLastYear",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "VAR B = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))",
+              "VAR C = A-1",
+              "VAR D = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "RETURN",
+              "\"LAST YEAR (\"&C&\")\"",
+              "--\"PETERNAKAN \"&D&\" LAST YEAR (\" & C &\")\""
+            ],
+            "lineageTag": "d9fb9684-097e-4c58-9786-589c85818fca"
+          },
+          {
+            "name": "TextThisYear",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "var B = IF(ISFILTERED('Sumber Daya Peternakan'[Komoditas]),SELECTEDVALUE('Sumber Daya Peternakan'[Komoditas]), BLANK())",
+              "RETURN",
+              "\"DATA TERAKHIR (\" &A&\")\"",
+              "--\"PETERNAKAN \" &B& \" DARI DATA TERAKHIR (\" & A &\")\""
+            ],
+            "lineageTag": "48a06354-0d85-45c3-9647-655797f99641"
+          },
+          {
+            "name": "#Growth",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = IFERROR(([#YTD_V]-[#LYTD_V])/[#LYTD_V],0)",
+              "RETURN",
+              "A*20"
+            ],
+            "lineageTag": "d3014b4e-15b4-42fb-8f65-684522d604d5"
+          },
+          {
+            "name": "TextGrowth",
+            "expression": [
+              "",
+              "\"Growth %\""
+            ],
+            "lineageTag": "da5187b0-3838-47e6-9b4b-df31ec83f922"
+          },
+          {
+            "name": "Total Nilai",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "SUM('Sumber Daya Peternakan'[Nilai])",
+            "formatStringDefinition": {
+              "expression": [
+                "VAR A = SELECTEDMEASURE()",
+                "return",
+                "SWITCH(TRUE(),",
+                "A<1000,\"0\",",
+                "A<1000000,\"#,.0K\",",
+                "A<1000000000,\"#,,.0M\",",
+                "A>=1000000000,\"#,,,.0B\")"
+              ]
+            },
+            "lineageTag": "4841ceff-863a-4c75-acbe-c06417a16839"
+          },
+          {
+            "name": "#TextYTD",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "VAR B = MAX('Sumber Daya Peternakan'[Tahun])-1",
+              "RETURN",
+              "A&\" vs LY\""
+            ],
+            "lineageTag": "708d7f59-cf23-44ed-8cb5-6bcf8a76198f"
+          },
+          {
+            "name": "#TextLY",
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])-1",
+              "RETURN",
+              "\"(\"&A&\")\""
+            ],
+            "lineageTag": "ab7b6424-b5b8-4fc9-8d5f-69c952d67504"
+          },
+          {
+            "name": "#Value",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Satuan]<>\"KG\"))",
+            "formatString": "0",
+            "lineageTag": "ee5e0e3d-7458-40f2-b6db-d100b95532bc"
+          },
+          {
+            "name": "Date of Max",
+            "expression": [
+              "",
+              "Var __SelectedMax =",
+              " CALCULATE(",
+              "   MAX( 'Sumber Daya Peternakan'[Nilai]),",
+              "    ALLSELECTED(DimDate)",
+              ")",
+              "",
+              "RETURN ",
+              "",
+              "CALCULATE(",
+              "    VALUES(DimDate[YEAR]),",
+              "        FILTER(",
+              "            ALL( DimDate),",
+              "            [Max] = __SelectedMax )",
+              ")"
+            ],
+            "lineageTag": "6d8ed4f6-245d-4ede-9a5e-7b89e0619896"
+          },
+          {
+            "name": "Max",
+            "expression": "MAX('Sumber Daya Peternakan'[Nilai])",
+            "formatString": "0",
+            "lineageTag": "00feea4a-2fcd-416a-9ca3-8429f54e3445"
+          },
+          {
+            "name": "Measure for a Card",
+            "expression": "\"Produksi tertinggi dengan nilai \"&[MaxProduksiTahun]&\" Pada tahun \"& [Date of Max]",
+            "lineageTag": "a1e812a5-2619-4b3f-861f-065e1e730354"
+          },
+          {
+            "name": "MaxProduksiTahun",
+            "expression": [
+              "",
+              "var tbl = SUMMARIZE('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun],\"Total Nilai\",SUM('Sumber Daya Peternakan'[Nilai]))",
+              "return",
+              "MAXX(tbl,[Total Nilai])"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "47e57cd4-aa91-4f14-bf01-f4abf656dd53"
+          },
+          {
+            "name": "maxx",
+            "expression": [
+              "",
+              ""
+            ],
+            "formatString": "0",
+            "lineageTag": "0abdee06-ff77-4bf0-9b9f-b73b7d8d4f7b"
+          },
+          {
+            "name": "Produksi/Populasi",
+            "expression": [
+              "",
+              "VAR ton = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
+              "VAR pop = CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))",
+              "RETURN",
+              "ton/pop"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "2885f667-cb68-499d-ae9b-9b67ff6b00b8"
+          },
+          {
+            "name": "#YTD_G",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX('Sumber Daya Peternakan'[Tahun])",
+              "RETURN",
+              "CALCULATE([#Production_V],FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Tahun] = A))"
+            ],
+            "lineageTag": "59e22d8f-cc56-41e4-9e02-79fb0b1751c3"
+          },
+          {
+            "name": "#LYTD_G",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR A = MAX(DimDate[YEAR])",
+              "VAR B = A-1",
+              "RETURN",
+              "CALCULATE([#Production_V],FILTER(ALL('Sumber Daya Peternakan'[Tahun]),'Sumber Daya Peternakan'[Tahun] = B ))"
+            ],
+            "lineageTag": "e7a261bd-cd11-419e-af3c-28fa416f62f3"
+          },
+          {
+            "name": "#Growth_Pro/Pop",
+            "expression": "IFERROR(([#YTD_G]-[#LYTD_G])/[#LYTD_G],0)",
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%",
+            "lineageTag": "72a09444-de5b-4c68-9207-c29cf521ffab"
+          },
+          {
+            "name": "#Production_V",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\"))",
+            "formatString": "#,0",
+            "lineageTag": "7ac55094-487a-4856-9a87-a0728bcaa593"
+          },
+          {
+            "name": "#LC_Production",
+            "expression": "IF(DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])<=1,CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),ALL('Sumber Daya Peternakan'[Tahun])),CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"PRODUKSI\")))",
+            "formatString": "0",
+            "lineageTag": "cd4a7162-6b8e-46ae-bed1-f0145e626c6d"
+          },
+          {
+            "name": "#Population_V",
+            "expression": "CALCULATE(SUM('Sumber Daya Peternakan'[Nilai]),FILTER('Sumber Daya Peternakan','Sumber Daya Peternakan'[Dimensi] = \"POPULASI\"))/100",
+            "formatString": "#,0",
+            "lineageTag": "c719246e-698f-4865-a22a-c00c4c1f948b"
+          },
+          {
+            "name": "#Count",
+            "expression": "DISTINCTCOUNT('Sumber Daya Peternakan'[Tahun])",
+            "formatString": "0",
+            "lineageTag": "d78e7269-914a-48d3-8007-d0187fed1ef3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sumber Daya Peternakan-a988a4b7-2065-4fb5-8fe3-48d5aa6d5529",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Riza\\Downloads\\Sumber Daya Peternakan.csv\"),[Delimiter=\",\", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Bidang\", type text}, {\"Dimensi\", type text}, {\"Level\", type text}, {\"Komoditas\", type text}, {\"Satuan\", type text}, {\"Tahun\", Int64.Type}, {\"Nilai\", Int64.Type}, {\"Kabupaten\", type text}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each true),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each [Tahun] > 2000),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Filtered Rows1\",{{\"Level\", \"Provinsi/Nasional\"}}),",
+                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Renamed Columns\", each true),",
+                "    #\"Inserted Text After Delimiter\" = Table.AddColumn(#\"Filtered Rows2\", \"Text After Delimiter\", each Text.AfterDelimiter([#\"Provinsi/Nasional\"], \" \"), type text),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Inserted Text After Delimiter\",{{\"Text After Delimiter\", \"Provinsi\"}}),",
+                "    #\"Filtered Rows3\" = Table.SelectRows(#\"Renamed Columns1\", each [Tahun] > 2000 and [Tahun] <= 2019),",
+                "    #\"Filtered Rows4\" = Table.SelectRows(#\"Filtered Rows3\", each true)",
+                "in",
+                "    #\"Filtered Rows4\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }
